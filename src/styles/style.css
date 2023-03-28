@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -24,16 +24,16 @@ ul {
   padding: 4rem;
 }
 .morePicture button {
-  padding: 0.25rem 0.5rem;
-  font-size: 2rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.5rem;
   border: none;
-  background-color: rgb(73, 0, 73);
-  color: white;
+  background-color: rgb(227, 227, 194);
+  color: rgb(110, 110, 105);
   cursor: pointer;
 }
 
 nav {
-  background-color: rgb(155, 107, 155);
+  background-color: rgb(227, 227, 194);
 }
 nav ul {
   display: flex;
@@ -41,11 +41,11 @@ nav ul {
   margin-right: 3rem;
 }
 nav ul li {
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
 }
 nav ul a {
   font-size: 1.5rem;
-  color: white;
+  color: rgb(110, 110, 105);
 }
 
 .search {
@@ -56,13 +56,21 @@ nav ul a {
 }
 .search input,
 .search button {
-  font-size: 2rem;
-  padding: 0.25rem;
-  border: 3px solid rgb(43, 0, 43);
+  font-size: 1.5rem;
+  padding: 0.55rem;
+  border: 2px solid rgb(227, 227, 194);
+}
+.search input:focus {
+  outline: none;
 }
 .search button {
-  background-color: rgb(73, 1, 73);
-  color: white;
+  background-color: rgb(227, 227, 194);
+  color: rgb(110, 110, 105);
+  cursor: pointer;
+}
+.search button .searchIcon {
+  width: 1.35rem;
+  filter: invert(43%) sepia(5%) saturate(352%) hue-rotate(22deg) brightness(95%) contrast(82%);
 }
 
 .footer {
@@ -70,6 +78,7 @@ nav ul a {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  padding: 1rem 0;
   background-color: rgb(206, 206, 206);
 }
 
@@ -86,14 +95,38 @@ nav ul a {
 .pictures .picture .imageContainer {
   overflow: hidden;
   height: 40vh;
+  cursor: pointer;
 }
 .pictures .picture .imageContainer img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: all 0.3s ease;
+  -webkit-filter: brightness(100%);
 }
 .pictures .picture .imageContainer img:hover {
-  transform: scale(1.25);
+  -webkit-filter: brightness(80%);
+  transition: all 1s ease;
+}
+.pictures .picture .imageContainer:hover + .info {
+  visibility: visible;
+}
+.pictures .picture .info {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  z-index: 200;
+  position: relative;
+  bottom: 3rem;
+  width: 90%;
+  margin: 0rem 1rem;
+  justify-content: space-between;
+  visibility: hidden;
+}
+.pictures .picture .info .photographer {
+  color: white;
+}
+.pictures .picture .info .downloadButton {
+  width: 1.25rem;
+  filter: brightness(0) invert(1);
 }/*# sourceMappingURL=style.css.map */

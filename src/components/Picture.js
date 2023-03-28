@@ -1,18 +1,20 @@
 import React from "react";
+import { ReactComponent as Download } from "../images/download.svg";
 
 const Picture = ({ key, data }) => {
   return (
     <div className="picture">
-      <p>{data.photographer}</p>
       <div className="imageContainer">
-        <img src={data.src.large} alt="" />
-      </div>
-      <p>
-        Download Image: {""}
         <a target="_blank" href={data.src.large}>
-          Click Here
+          <img src={data.src.large} alt="" />
         </a>
-      </p>
+      </div>
+      <div className="info">
+        <a className="photographer">{data.photographer}</a>
+        <div className="downloadButton">
+          <Download />
+        </div>
+      </div>
     </div>
   );
 };

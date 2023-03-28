@@ -6,13 +6,22 @@
 
   input,
   button {
-    font-size: 2rem;
-    padding: 0.25rem;
-    border: 3px solid rgb(43, 0, 43);
+    font-size: 1.5rem;
+    padding: 0.55rem;
+    border: 2px solid rgb(227, 227, 194);
+  }
+  input:focus {
+    outline: none;
   }
 
   button {
-    background-color: rgb(73, 1, 73);
-    color: white;
+    background-color: rgb(227, 227, 194);
+    color: rgb(110, 110, 105);
+    cursor: pointer;
+    .searchIcon {
+      width: 1.35rem;
+      filter: invert(43%) sepia(5%) saturate(352%) hue-rotate(22deg)
+        brightness(95%) contrast(82%);
+    }
   }
 }
